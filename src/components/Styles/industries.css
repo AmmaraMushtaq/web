@@ -1,0 +1,179 @@
+  .val-image{
+    background-color: rgb(137, 137, 164);
+    height: 70%;
+    width: 60%;
+  }
+.Industries-img {
+    width: 100%;
+    height: 100%;
+}
+
+.Industries-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.Industries-link {
+    width: 100vw;
+}
+.Industries-link {
+   width: 33%;
+}
+
+.Industries-link ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+    background-color: #c5c8c9;
+    height: 20%;
+    font-size: 20px;
+    border-radius: 180px;
+    padding: 5px;
+  
+    justify-content: center;
+   align-items: center ;
+
+}
+
+.Industries-link ul li a {
+    
+    border-radius: 180px;
+    padding: 1px;
+    color: black;
+
+}
+
+.Industries-link ul li a:hover {
+   
+    border-radius: 180px;
+    padding: 1px;
+
+}
+
+.Industries-p {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.Industries-arrow p {
+    width: 20vw;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.Industries-label {
+
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 0.5rem;
+    font-size: 20px;
+    box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
+}
+
+.cIndustries-label:hover.chip {
+    animation-play-state: paused;
+}
+
+.ind-item{
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+
+.ind-img img{
+    background-color: yellow;
+    position: relative;
+}
+.ind-paharag p{
+  
+}
+@media (max-width:686px) {
+    .services {}
+
+    .services-img {}
+
+    .services-detail {
+        color: white;
+        display: inline;
+
+    }
+
+    .Industries-arrow p {
+        width: auto;
+        text-align: justify;
+        padding: 5%;
+
+    }
+
+    .Industries-arrow {
+        width:auto;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .Industries-link {
+        width: auto;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .Industries-link ul li {
+        width: 30vw;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: white;
+
+
+    }
+
+    .Industries-link ul li a {
+        margin-bottom: 10px;
+        color: white;
+
+    }
+
+    a:hover {
+        background-color: #1b97bd;
+        height: 20%;
+        font-size: 20px;
+        border-radius: 180px;
+        padding: 5px;
+    }
+
+    .Industries-p {
+        display: inline;
+        width: auto;
+        width: 100vw;
+
+
+
+    }
+
+    .Industries-label {
+        width: 100vw;
+        overflow: hidden;
+        border-radius: 0px;
+
+    }
+
+    .chip {
+        animation: animate 3s alternate linear infinite;
+        display: flex;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translate3d(0, 0, 0);
+
+        }
+
+        100% {
+            transform: translate3d(-1100px, 0, 0);
+        }
+    }
+}

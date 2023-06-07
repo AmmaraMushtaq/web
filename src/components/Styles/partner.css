@@ -1,0 +1,42 @@
+.partner-main{
+
+}
+
+.partner-img img{
+}
+.partner-heading{
+  width: 850px;
+ margin:0 auto;
+ overflow: hidden;
+ padding-left: 2.5rem;
+ background:white;
+box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
+}
+
+.partner-heading :hover.logo{
+  animation-play-state:paused;
+}
+@media (max-width: 686px) {
+
+  .partner-heading{
+    width: 70vw;
+   overflow: hidden;
+   border-radius: 0px;
+   padding: 0;
+   background:white;
+  }
+  .logo{
+    animation: animate 2s alternate linear infinite;
+    display: flex;
+  } 
+  @keyframes animate{
+    0%{
+      transform: translate3d(0,0,0);
+  
+    }
+    100%{
+      transform: translate3d(-1100px,0,0);
+    }
+  }
+
+}

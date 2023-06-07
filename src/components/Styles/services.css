@@ -1,0 +1,184 @@
+.services-img {
+    color: white;
+    width: 100%;
+background-color: #00c2ff;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.services-link {
+    width: 100vw;
+}
+
+.services-link {
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.services-link ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #34cdfc;
+    height: 20%;
+    font-size: 20px;
+    border-radius: 180px;
+    padding: 5px;
+    width: 65%;
+
+}
+
+.services-link ul li a {
+    
+    border-radius: 180px;
+    padding: 1px;
+    color: whitesmoke;
+
+}
+
+.services-link ul li a:hover {
+    background-color: #1b97bd;
+    border-radius: 180px;
+    padding: 1px;
+
+}
+
+.ser-p {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+
+}
+
+.service-arrow p {
+    width: 20vw;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.chip-label {
+
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 0.5rem;
+    font-size: 20px;
+
+    box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
+}
+
+.chip-label:hover.chip {
+    animation-play-state: paused;
+}
+
+@media (max-width:686px) {
+    .services {}
+
+    .services-img {}
+
+    .services-detail {
+        color: white;
+        display: inline;
+
+    }
+
+    .service-arrow p {
+        width: 90vw;
+        text-align: justify;
+        padding: 5%;
+
+    }
+
+    .service-arrow {
+        width: 60vw;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .services-img {
+        width: 100%;
+
+    }
+
+    .service-img {
+        opacity: 1;
+        visibility: visible;
+        width: 60%;
+        justify-content: center;
+        align-items:center ;
+    }
+
+    .service-img img {
+        width: 50%;
+        height: 10%;
+    }
+
+    .services-link {
+        width: 90vw;
+        height: auto;
+        padding-bottom: 5%;
+    }
+
+    .services-link ul li {
+        width: 60vw;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: white;
+
+    }
+
+    .services-link ul li a {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    a:hover {
+        background-color: #1b97bd;
+        height: 20%;
+        font-size: 20px;
+        border-radius: 180px;
+        padding: 5px;
+    }
+
+    .ser-p {
+        display: inline;
+        width: auto;
+        width: 100vw;
+
+
+
+    }
+
+    .chip-label {
+        width: 100vw;
+        overflow: hidden;
+        border-radius: 0px;
+
+    }
+
+    .chip {
+        animation: animate 3s alternate linear infinite;
+        display: flex;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translate3d(0, 0, 0);
+
+        }
+
+        100% {
+            transform: translate3d(-1100px, 0, 0);
+        }
+    }
+}

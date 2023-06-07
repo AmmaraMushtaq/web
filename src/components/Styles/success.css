@@ -1,0 +1,44 @@
+.success-heading{
+   
+    margin:0 auto;
+}
+.card-wrapper{
+    display: flex;
+    padding: 7px;
+   justify-content: right;
+  
+}
+.cards{
+   margin: 3px;
+   width: 20%;
+   border-radius: 15px;
+}
+.card-heading{
+    background-color: rgb(146, 134, 134);
+   
+    font-size: 17px;
+    border-radius: 180px;
+   text-align: center;
+}
+.card-heading h5{
+    width: 100%;
+    height: 30%;
+
+}
+
+
+.success-detail{
+ 
+    width: 40%;
+    font-size: 20px;
+}
+.success-detail h1{
+    font-size: 50px;
+    padding: 3px;
+}
+.success-link{
+   display: flex;
+    justify-content: right;
+    padding: 3px;
+    margin: 3px;
+}
