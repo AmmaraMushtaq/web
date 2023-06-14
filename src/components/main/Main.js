@@ -11,10 +11,14 @@ import Technology from './Technology';
 import Success from './Success';
 import Industries from './Industries';
 import Values from './Values';
-import Carrer from '../home/Carrer';
+import Carrer from './Carrer';
 import Footer from '../home/Footer';
 import Layout from '../home/Layout';
 import BPartner from './B-partner';
+import Meeting from './Meeting';
+
+
+
 
 const Main = () => {
   const [mobileOpen,setMobileOpen]=useState(false)
@@ -27,6 +31,10 @@ const Main = () => {
     <SwipeableTextMobileStepper/>
     </Box>
   )
+  
+
+
+
   return (
     <>
       <Container maxWidth="lg" sx={{ height: 'auto', marginTop: "4%" }}>
@@ -92,36 +100,40 @@ const Main = () => {
         </div>
             
          
-          <div className='icons'>
-          
-            <Box 
-              sx={{display:{xs:'none',sm:'block'},
-              my: 2, "& img": {
-                fontSize: "20px",
-                cursur: 'pointer',
-                marginLeft: 10,
-              },
-              "& img:hover": {
-                color: 'red',
-                transform: 'translatex(5px)',
-                transition: 'all 400ms',
-              }
-            }}>
+        <section class="customers-logo ai-section section--indents-large" >
+    <div class="ai-container ai-section__customers-logo" >
+      <div class="customers-logo__info">
+                      </div>
+                    
+      <div class="customers-logo__wrapper js-customers-logo-slider">
+        <div class="customers-logo__item">
+              <img width="223" height="60" src="https://www.avenga.com/wp-content/uploads/2023/03/iqvia.svg"
+               class="customers-logo__img object-fit-contain colored-highlight" alt="iqvia" decoding="async"
+                loading="lazy"/>           
+                 </div><div class="customers-logo__item">
+              <img width="100" height="60" src="https://www.avenga.com/wp-content/uploads/2023/01/Trov.png"
+               class="customers-logo__img object-fit-contain colored-highlight" alt="Trov" decoding="async"
+                loading="lazy"/>            
+                </div><div class="customers-logo__item">
+              <img width="90" height="60" src="https://www.avenga.com/wp-content/uploads/2023/03/MAZDA.svg" 
+              class="customers-logo__img object-fit-contain colored-highlight" alt="MAZDA" decoding="async" 
+              loading="lazy"/>            
+              </div><div class="customers-logo__item">
+              <img width="80" height="60" src="https://www.avenga.com/wp-content/uploads/2023/01/OLO.png" 
+              class="customers-logo__img object-fit-contain colored-highlight" alt="OLO" decoding="async" 
+              loading="lazy"/>            
+              </div><div class="customers-logo__item">
+              <img width="133" height="60" src="https://www.avenga.com/wp-content/uploads/2023/06/GSK-1.svg" 
+              class="customers-logo__img object-fit-contain colored-highlight" alt="GSK Client logo" decoding="async" 
+              loading="lazy"/>
+                </div></div>
               
-             
-                 <div className='items-icon'>
-             <img src='	https://www.avenga.com/wp-content/uploads/2023/01/GSK.png'/>
-            <img src="https://www.avenga.com/wp-content/uploads/2023/01/Trov.png"/>
-            <img src='https://www.avenga.com/wp-content/uploads/2023/03/MAZDA.svg'/>
-            <img src='https://www.avenga.com/wp-content/uploads/2023/01/OLO.png'/>
-            <img src='https://www.avenga.com/wp-content/uploads/2023/03/iqvia.svg'/>
-            </div>
+
+    </div>
+  </section>
               {/* <LinkedInIcon /><TwitterIcon /><FacebookIcon /><InstagramIcon /> */}
              
-            </Box>
-           
-         
-        </div> 
+            
         {/* */}
         </Container>
         
@@ -137,6 +149,7 @@ const Main = () => {
        <BPartner/>  
       <Values/>
       <Carrer/>
+       <Meeting/> 
    
     </>
   )
