@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Styles/Footer.css'
+import {Container,Box} from '@mui/material'
 
 const Footer = () => {
   return (
@@ -51,6 +52,7 @@ const Footer = () => {
         </div>
       </div >
       <div className="ai-footer-social-container" >
+      <Container maxWidth='lg' sx={{ width: '100vw ', padding: "1%" ,height:"auto"}}>
         <div className="ai-container" >
 
           <div className="social-left-col" >
@@ -119,15 +121,18 @@ const Footer = () => {
                     <path d="M11.6666667,6.66666667 L11.6666667,4.66666667 C11.6666667,3.8 11.8666667,3.33333333 13.2666667,3.33333333 L15,3.33333333 L15,0 L12.3333333,0 C9,0 7.66666667,2.2 7.66666667,4.66666667 L7.66666667,6.66666667 L5,6.66666667 L5,10 L7.66666667,10 L7.66666667,20 L11.6666667,20 L11.6666667,10 L14.6,10 L15,6.66666667 L11.6666667,6.66666667 Z" id="color" fill="#0F0F0F"></path>
                   </g>
                 </svg>      </a>
-            </div>
-
+                
             <div className="footer-logo-container">
               <a href="https://www.avenga.com/" class="custom-logo-link" rel="home" aria-current="page">
                 <img width="530" height="110" src="https://www.avenga.com/wp-content/uploads/2022/11/logo-color-black.svg"
-                  className="custom-logo" alt="avenga" decoding="async" /></a>            </div>
+                  className="custom-logo" alt="avenga" decoding="async" /></a> </div>
+                
+            </div>
+
           </div>
 
         </div>
+        </Container>
       </div>
       <div className="ai-footer__item ai-footer__item--switchers">
         <div className="switchers">

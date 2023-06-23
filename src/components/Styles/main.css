@@ -9,7 +9,8 @@
     font-weight: 100;
     font-size: 1.5rem;
     width: 60%;
-    height: 20%;
+    justify-content: space-between;
+    height: auto;
 }
 .m-heading h1{
   width: 100%;
@@ -20,16 +21,21 @@
   display:flex;
  justify-content: flex-start;
  align-items: center;
+display: inline;
+justify-content: space-between;
 
 }
- .static-txt h1 span {
+.static-txt{
+  padding-bottom:15% ;
+}
+ .static-txt> h1 span {
   font-size: 40px;
   font-weight: 400;
   margin-right: 10px;
   margin-left: 5px;
 
 }
-.static-txt h1  {
+.static-txt> h1  {
  width: 450px;
  margin: auto;
  display: flex;
@@ -40,6 +46,7 @@
 box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
 
 }
+
 .m-img{
   width: 100%;height: 100%;
 
@@ -57,10 +64,7 @@ box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
   height: 10%;
   background-color: red;
 }
-.main-arrow{
 
-  
-}
 .icon-p{
 
   display: flex;
@@ -113,15 +117,16 @@ box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
  justify-content: flex-start;
  align-items: center;
  background-color: #5fc9ea;
- width: 70%;
+ width: 70%; 
+
 
 }
-.static-txt h1 span {
+.static-txt> h1 span {
   font-size: 30px;
   font-weight: 150;
   margin-right: 7px;
   margin-left: 4px;
-
+ 
 }
 .m-img{
   width: 100%;height: 100%;
@@ -159,15 +164,7 @@ box-shadow: rgba(0 0 0 0.35) 0 5px 15px;
   display: flex;
 
 } 
-@keyframes animate{
-  0%{
-    transform: translate3d(0,0,0);
 
-  }
-  100%{
-    transform: translate3d(-1100px,0,0);
-  }
-}
 
 
 }
@@ -189,3 +186,27 @@ background-color: aqua;
 justify-content: space-between;
 
 }
+
+
+@keyframes infiniteAnimation {
+ 0% {
+    left: 5px;
+  }
+
+    10% {
+      left:1px
+    /* Define the styles for the end point of the animation */
+  }
+}
+.js-customers-logos-slider{
+  position: relative;
+  height: 100px;
+  width: 120%;
+  animation-duration: 4s;
+  animation-direction: reverse;
+  animation:  infiniteAnimation 3s infinite ;
+}
+.customers-logo__wrapper{
+  display: flex;
+}
+

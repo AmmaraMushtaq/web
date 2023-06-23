@@ -182,3 +182,20 @@ background-color: #00c2ff;
         }
     }
 }
+
+@keyframes infiniteAnimation {
+    0% {
+        left: 10px;
+      }
+      100% {
+        left:-10px}
+   }
+   .js-button-slider{
+     position: relative;
+     height: 100px;
+     width: 70px;
+     animation-delay: 2s;
+     animation-direction: reverse;
+    
+     animation:  animate 5s alternate linear infinite; ;
+   }

@@ -1,13 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Container, } from '@mui/material'
 import '../Styles/services.css'
 
 const StrategySer = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
   const [showTab,setShowTab]=useState(1)
   const handletab=(e)=>{
     setShowTab(e)
 
   }
+
   return (
     <>
 
@@ -34,16 +48,30 @@ const StrategySer = () => {
                      </button>
 
                   <div className="tab__content tab__content--has-image" style={{ height: ' 430px' }}>
-                    <div className="tab__buttons-container js-buttons-slider">
-                      <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/technology-consulting/" tabindex="-1" >
-                        Technology consulting </a>
+                  {isMobile ? (
+                    <div className="tab__buttons-container js-buttons-slider js-button-slider"style={{ height: '8%' ,width:'9%',display:"flex"}}>
+                      <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/technology-consulting/"style={{}} >
+                         consulting </a>
                         <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/digital-transformation/" tabindex="-1" >
-                        Digital transformation  </a>
+                      transformation  </a>
                         <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/research-development/" >
-                        Research and development   </a>
+                        Research   </a>
                         <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/customer-experience/" tabindex="-1" >
-                        Customer experience   </a>
+                        experience   </a>
                         </div>
+                          ):( 
+
+                            <div className="tab__buttons-container js-buttons-slider ">
+                            <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/technology-consulting/" tabindex="-1" >
+                              Technology consulting </a>
+                              <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/digital-transformation/" tabindex="-1" >
+                              Digital transformation  </a>
+                              <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/research-development/" >
+                              Research and development   </a>
+                              <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/customer-experience/" tabindex="-1" >
+                              Customer experience   </a>
+                              </div>
+                           )}
 
                     <div className="tab__text wysiwyg">
                       <p className="pfs2">Avenga brings personalization to digitalization. Feasible, grounded in reality, and tied to the client’s business goals, our digital strategy services generate commercial value with custom-tailored digital transformation strategies.</p>
@@ -66,7 +94,8 @@ const StrategySer = () => {
                     </svg>              </button>
 
                   <div className="tab__content tab__content--has-image" style={{ height: '430px' }}>
-                    <div className="tab__buttons-container js-buttons-slider">
+                  {isMobile ? (
+                    <div className="tab__buttons-container js-buttons-slider js-button-slider"style={{ height: '8%' ,width:'9%',display:"flex"}}>
                       <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/custom-software-development/" tabindex="-1" >
                         Custom software development  </a>
                         <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/mobile-app-development/" tabindex="-1" >
@@ -80,7 +109,22 @@ const StrategySer = () => {
                         <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/enterprise-software-development/" tabindex="-1" >
                         Enterprise software development  </a>
                         </div>
-
+       ):( 
+        <div className="tab__buttons-container js-buttons-slider">
+                      <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/custom-software-development/" tabindex="-1" >
+                        Custom software development  </a>
+                        <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/mobile-app-development/" tabindex="-1" >
+                        Mobile development  </a>
+                        <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/web-software-development/" >
+                        Web development  </a>
+                        <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/ui-ux/" tabindex="-1" >
+                        UI/UX </a>
+                        <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/qa-testing-services/" tabindex="-1" >
+                        QA  </a>
+                        <a className="tab__button ai-btn ai-btn--xsmall ai-btn--primary-lighter" target="_self" href="https://www.avenga.com/offering/enterprise-software-development/" tabindex="-1" >
+                        Enterprise software development  </a>
+                        </div>
+       )}
                     <div className="tab__text wysiwyg">
                       <p className="pfs2">Our clients choose Avenga because we deliver systematic solutions and not stand-alone bits of software. This business-driven approach to solution engineering lets us design, develop, and implement software that alleviates intricate business scenarios at the core.</p>
                     </div>

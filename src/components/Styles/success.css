@@ -1,44 +1,87 @@
-.success-heading{
-   
-    margin:0 auto;
+.success-heading {
+
+    margin: 0 auto;
 }
-.card-wrapper{
+
+.card-wrapper {
     display: flex;
     padding: 7px;
-   justify-content: right;
-  
+    justify-content: right;
+
 }
-.cards{
-   margin: 3px;
-   width: 20%;
-   border-radius: 15px;
+
+.cards {
+    margin: 3px;
+    width: 20%;
+    border-radius: 15px;
 }
-.card-heading{
+
+.card-heading {
     background-color: rgb(146, 134, 134);
-   
+
     font-size: 17px;
     border-radius: 180px;
-   text-align: center;
+    text-align: center;
 }
-.card-heading h5{
+
+.card-heading h5 {
     width: 100%;
     height: 30%;
 
 }
 
 
-.success-detail{
- 
+.success-detail {
+
     width: 40%;
     font-size: 20px;
 }
-.success-detail h1{
+
+.success-detail h1 {
     font-size: 50px;
     padding: 3px;
 }
-.success-link{
-   display: flex;
+
+.success-link {
+    display: flex;
     justify-content: right;
     padding: 3px;
     margin: 3px;
 }
+.your-component {
+    display: flex;
+    /* Additional styles for your component */
+  }
+  
+  .animate-component {
+    animation-name: your-animation;
+    animation-duration: 1s;
+    /* Additional animation properties */
+  }
+  
+  @keyframes your-animation {
+    0% {
+      /* Animation styles at the beginning */
+    }
+    100% {
+      /* Animation styles at the end */
+    }
+  }
+  
+  
+  .js-case-cards-slider {
+  display: flex;
+  }
+  
+  js-case-cards-slider.animate {
+    animation-name: your-animation;
+    animation-duration: 1s;
+    /* Additional animation properties */
+  }
+  
+  @keyframes your-animation {
+    /* Animation keyframes */
+  }
+  
+  
+  

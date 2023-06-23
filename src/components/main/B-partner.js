@@ -1,9 +1,21 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Container, Box, } from '@mui/material'
 
 import '../../App.css'
 const BPartner = () => {
-    
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
     return (
         <>
             
@@ -26,7 +38,9 @@ const BPartner = () => {
 
                          <div className="globe-section__item globe-section__item--globe">
                             <div id="globe-area" 
-                            data-locations="[{&quot;location&quot;:&quot;Germany&quot;,&quot;name&quot;:&quot;Germany&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-germany.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.7,&quot;y&quot;:-1.15},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Ukraine&quot;,&quot;name&quot;:&quot;Ukraine&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-ukraine.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.8,&quot;y&quot;:-1.5},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Poland&quot;,&quot;name&quot;:&quot;Poland&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-poland.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.8,&quot;y&quot;:-1.35},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Portugal&quot;,&quot;name&quot;:&quot;Portugal&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-portugal.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.71,&quot;y&quot;:-0.85},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Malta&quot;,&quot;name&quot;:&quot;Malta&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-malta.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.61,&quot;y&quot;:-1.15},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;USA&quot;,&quot;name&quot;:&quot;USA&quot;,&quot;\u0441ontinent&quot;:&quot;Americas&quot;,&quot;professionals&quot;:&quot;800+&quot;,&quot;clients&quot;:&quot;100+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-usa.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.5,&quot;y&quot;:0.5},&quot;meshName&quot;:&quot;Earth_mesh-usa&quot;},{&quot;location&quot;:&quot;Argentina&quot;,&quot;name&quot;:&quot;Argentina&quot;,&quot;\u0441ontinent&quot;:&quot;Americas&quot;,&quot;professionals&quot;:&quot;800+&quot;,&quot;clients&quot;:&quot;100+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-argentina.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:-0.66,&quot;y&quot;:0.23},&quot;meshName&quot;:&quot;Earth_mesh-usa&quot;},{&quot;location&quot;:&quot;Malaysia&quot;,&quot;name&quot;:&quot;Malaysia&quot;,&quot;\u0441ontinent&quot;:&quot;Asia&quot;,&quot;professionals&quot;:&quot;50+&quot;,&quot;clients&quot;:&quot;10+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-malaysia.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.11,&quot;y&quot;:-2.87},&quot;meshName&quot;:&quot;Earth_mesh-Malaysia&quot;}]" data-locations-btn="{&quot;title&quot;:&quot;Find partner&quot;,&quot;url&quot;:&quot;https:\/\/www.avenga.com\/contact-avenga\/&quot;,&quot;target&quot;:&quot;&quot;}" data-land-mesh-name="Earth_mesh-land" data-model-link="https://www.avenga.com/wp-content/themes/custom-theme/dist/models/globe.json"
+                            data-locations="[{&quot;location&quot;:&quot;Germany&quot;,&quot;name&quot;:&quot;Germany&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-germany.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.7,&quot;y&quot;:-1.15},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Ukraine&quot;,&quot;name&quot;:&quot;Ukraine&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-ukraine.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.8,&quot;y&quot;:-1.5},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Poland&quot;,&quot;name&quot;:&quot;Poland&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-poland.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.8,&quot;y&quot;:-1.35},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Portugal&quot;,&quot;name&quot;:&quot;Portugal&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-portugal.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.71,&quot;y&quot;:-0.85},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;Malta&quot;,&quot;name&quot;:&quot;Malta&quot;,&quot;\u0441ontinent&quot;:&quot;Europe&quot;,&quot;professionals&quot;:&quot;3450+&quot;,&quot;clients&quot;:&quot;300+&quot;,&quot;flagUrl&quot;:&quot;https:\/
+                            \/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-malta.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.61,&quot;y&quot;:-1.15},&quot;meshName&quot;:&quot;Earth_mesh-Europe&quot;},{&quot;location&quot;:&quot;USA&quot;,&quot;name&quot;:&quot;USA&quot;,&quot;\u0441ontinent&quot;:&quot;Americas&quot;,&quot;professionals&quot;:&quot;800+&quot;,&quot;clients&quot;:&quot;100+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-usa.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.5,&quot;y&quot;:0.5},&quot;meshName&quot;:&quot;Earth_mesh-usa&quot;},{&quot;location&quot;:&quot;Argentina&quot;,&quot;name&quot;:&quot;Argentina&quot;,&quot;\u0441ontinent&quot;:&quot;Americas&quot;,&quot;professionals&quot;:&quot;800+&quot;,&quot;clients&quot;:&quot;100+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-argentina.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:-0.66,&quot;y&quot;:0.23},&quot;meshName&quot;:&quot;Earth_mesh-usa&quot;},{&quot;location&quot;:&quot;Malaysia&quot;,&quot;name&quot;:&quot;Malaysia&quot;,&quot;\u0441ontinent&quot;:&quot;Asia&quot;,&quot;professionals&quot;:&quot;50+&quot;,&quot;clients&quot;:&quot;10+&quot;,&quot;flagUrl&quot;:&quot;https:\/\/www.avenga.com\/wp-content\/themes\/custom-theme\/dist\/images\/icons\/icon-flag-malaysia.svg&quot;,&quot;coordinates&quot;:{&quot;x&quot;:0.11,&quot;y&quot;:-2.87},&quot;meshName&quot;:&quot;Earth_mesh-Malaysia&quot;}]" data-locations-btn="{&quot;title&quot;:&quot;Find partner&quot;,&quot;url&quot;:&quot;https:\/\/www.avenga.com\/contact-avenga\/&quot;,&quot;target&quot;:&quot;&quot;}" data-land-mesh-name="Earth_mesh-land" 
+                            data-model-link="https://www.avenga.com/wp-content/themes/custom-theme/dist/models/globe.json"
                              data-professionals-translate="Professionals" data-clients-translate="Clients" className="is-initialized">
                            <div className="globe-area">
                             <div className="location-button-list" style={{gap: '50px'}}>
@@ -47,7 +61,8 @@ const BPartner = () => {
                                             <img height="16" width="20" src="https://www.avenga.com/wp-content/themes/custom-theme/dist/images/icons/icon-flag-usa.svg" alt=""/>
                                              USA</button>
                                              <button className="location-button" style={{marginLeft: '33.3333px'}}>
-                                                <img height="16" width="20" src="https://www.avenga.com/wp-content/themes/custom-theme/dist/images/icons/icon-flag-argentina.svg" alt=""/> Argentina</button>
+                                                <img height="16" width="20" src="https://www.avenga.com/wp-content/themes/custom-theme/dist/images/icons/icon-flag-argentina.svg" alt=""/> 
+                                                Argentina</button>
                                                 <button className="location-button" style={{marginLeft: '50px'}}>
                                                 <img height="16" width="20" src="https://www.avenga.com/wp-content/themes/custom-theme/dist/images/icons/icon-flag-malaysia.svg" alt=""/>
                                                  Malaysia</button></div>
@@ -66,7 +81,7 @@ const BPartner = () => {
                                                     <div><div className="location-description-text-small pfs6">Clients</div>
                                                     <div className="location-description-text-big hfs3">300+</div></div></div></div></div></div>
                         </div>
-
+                       
                         <div className="globe-section__item globe-section__item--facts">
                             <div className="facts-grid">
                                 <div className="fact">
@@ -83,37 +98,75 @@ const BPartner = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="globe-section__item">
-                            <div className="logos-grid logo-grid--mobile-slider js-logos-slider-mobile">
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/UN-Global-compact-1.png" className="logos-grid__image object-fit-contain colored-highlight" alt="UN Global compact" decoding="async" loading="lazy" />                                        
+                        {isMobile ? (
+                        <div className="globe-section__item"> 
+                            <div className="logos-grid logo-grid--mobile-slider js-logos-slider-mobile  ">
+                           
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight " data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/UN-Global-compact-1.png"
+                                     className="logos-grid__image object-fit-contain colored-highlight" alt="UN Global compact" decoding="async" loading="lazy" />                                        
                                      </div>
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Bronze-stevie-winner.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Bronze stevie winner" decoding="async" loading="lazy" />                                           
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight" data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Bronze-stevie-winner.png" 
+                                    className="logos-grid__image object-fit-contain colored-highlight" alt="Bronze stevie winner" decoding="async" loading="lazy" />                                           
                                      </div>
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/New-Clutch-2022.png" className="logos-grid__image object-fit-contain colored-highlight" alt="New Clutch 2022" decoding="async" loading="lazy" />                                            
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight" data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/New-Clutch-2022.png" 
+                                    className="logos-grid__image object-fit-contain colored-highlight" alt="New Clutch 2022" decoding="async" loading="lazy" />                                            
                                     </div>
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Clutch-global-2020.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Clutch global 2020" decoding="async" loading="lazy" />                                            
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight" data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Clutch-global-2020.png" 
+                                    className="logos-grid__image object-fit-contain colored-highlight" alt="Clutch global 2020" decoding="async" loading="lazy" />                                            
                                     </div>
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/IAOP-Global-outsourcing.png" className="logos-grid__image object-fit-contain colored-highlight" alt="IAOP Global outsourcing" decoding="async" loading="lazy" />                                            
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight" data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/IAOP-Global-outsourcing.png" 
+                                    className="logos-grid__image object-fit-contain colored-highlight" alt="IAOP Global outsourcing" decoding="async" loading="lazy" />                                            
                                     </div>
-                                <div className="logos-grid__item logos-grid__slide" data-slide="">
-                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Inc.5000.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Inc.5000" decoding="async" loading="lazy" />                                            
+                                <div className="logos-grid__item logos-grid__slide__image object-fit-contain colored-highlight" data-slide="">
+                                    <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Inc.5000.png" 
+                                    className="logos-grid__image object-fit-contain colored-highlight" alt="Inc.5000" decoding="async" loading="lazy" />                                            
                                     </div>
-
-                                <div className="logos-grid__item logos-grid__item--btn">
+                            </div>
+                            <div className="logos-grid__item logos-grid__item--btn">
                                     <a href="https://www.avenga.com/about/" title="About Avenga" className="ai-btn ai-btn--circle">
                                         About Avenga                    </a> 
                                 </div> 
                             </div>
+                            ):(
+                                 <div className="globe-section__item"> 
+                           <div className="logos-grid logo-grid--mobile-slider js-logos-slider-mobile">
+                           
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/UN-Global-compact-1.png" className="logos-grid__image object-fit-contain colored-highlight" alt="UN Global compact" decoding="async" loading="lazy" />                                        
+                              </div>
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Bronze-stevie-winner.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Bronze stevie winner" decoding="async" loading="lazy" />                                           
+                              </div>
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/New-Clutch-2022.png" className="logos-grid__image object-fit-contain colored-highlight" alt="New Clutch 2022" decoding="async" loading="lazy" />                                            
+                             </div>
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Clutch-global-2020.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Clutch global 2020" decoding="async" loading="lazy" />                                            
+                             </div>
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/IAOP-Global-outsourcing.png" className="logos-grid__image object-fit-contain colored-highlight" alt="IAOP Global outsourcing" decoding="async" loading="lazy" />                                            
+                             </div>
+                         <div className="logos-grid__item logos-grid__slide" data-slide="">
+                             <img width="225" height="100" src="https://www.avenga.com/wp-content/uploads/2023/01/Inc.5000.png" className="logos-grid__image object-fit-contain colored-highlight" alt="Inc.5000" decoding="async" loading="lazy" />                                            
+                             </div> <div className="logos-grid__item logos-grid__item--btn">
+                             <a href="https://www.avenga.com/about/" title="About Avenga" className="ai-btn ai-btn--circle">
+                                 About Avenga                    </a> 
+                         </div>
+
+                         
+                     </div></div>
+                         )}
+                         
                         </div>
                     </div>
                 </div>
 
-            </div>
+      
   </section> 
         </>
     )
